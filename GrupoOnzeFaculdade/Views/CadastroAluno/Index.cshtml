@@ -3,15 +3,58 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>CRUD - Lista de Alunos</h1>
-
 <p>
+
+</p><p>
+
+</p><p>
+
+</p><p>
+
+</p><p>
+
+</p><p>
+
+</p>
+<h1 style="text-align:left" >CRUD - Lista de Alunos</h1>
+<p>
+
+</p><p>
+
+</p><p>
+
+</p><p>
+
+</p><p>
+
+</p><p>
+
+</p>
+<p style="text-align:left">
+    
     <a asp-action="Create">Cadastrar Novo Aluno</a>
 </p>
-<table class="table">
+<p>
+
+</p><p>
+
+</p><p>
+
+</p><p>
+
+</p><p>
+
+</p><p>
+
+</p><p>
+
+</p>
+<table class="table" style="text-align:left">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.matricula)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.nome)
             </th>
@@ -25,6 +68,9 @@
         @foreach (var item in Model)
         {
             <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.matricula)
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.nome)
                 </td>

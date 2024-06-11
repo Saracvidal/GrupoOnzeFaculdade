@@ -8,26 +8,131 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/GrupoOnzeFaculdade.styles.css" asp-append-version="true" />
 </head>
+<style>
+    /* Estilos CSS */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    nav {
+        background-color: #444;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+
+    section {
+        padding: 20px;
+    }
+
+    .campus {
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+        .campus h2 {
+            color: #333;
+        }
+
+    .noticias {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .noticia {
+        width: 30%;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+        .noticia h3 {
+            color: #333;
+        }
+
+        .noticia p {
+            color: #666;
+        }
+
+    .cursos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .curso {
+        width: 30%;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+        .curso h3 {
+            color: #333;
+        }
+
+        .curso img {
+            width: 100%; /* Todas as imagens ocuparão 100% da largura da div */
+            height: auto; /* Manter a proporção da imagem */
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .curso p {
+            color: #666;
+        }
+</style>
+    
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+        <header style="background-color:midnightblue">
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm mb-3" style="background-color:midnightblue">
+                <div class="container-fluid" style="background-color:midnightblue">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color:aliceblue">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="CadastroAluno" asp-action="Index">Cadastro de Aluno</a>
-                        </li>
-                    </ul>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="background-color:midnightblue; text-align:center">
+                        <ul class="navbar-nav flex-grow-1" style="text-align:center">
+                            <li class="nav-item" style="background-color:midnightblue">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index" style="color:aliceblue !important; text-align:center">Home   |</a>
+                            </li>
+                            <li class="nav-item" style="background-color:midnightblue">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="CadastroAluno" asp-action="Index" style="color:aliceblue !important; text-align:center">Cadastro de Aluno - CRUD   |</a>
+                            </li>
+                            <li class="nav-item" style="background-color:midnightblue">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PoliticaSeguranca" style="color:aliceblue !important; text-align:center">Cartilha de Segurança   |</a>
+                            </li>
+
+                            <li class="nav-item" style="background-color:midnightblue">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Pdf" asp-action="Pdf" style="color:aliceblue !important; text-align:center">Documento - PROJETO INFRAESTRUTURA DE REDES</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -37,7 +142,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - GrupoOnzeFaculdade - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - GrupoOnzeFaculdade - <a asp-area="" asp-controller="Pdf" asp-action="Pdf" style="color:midnightblue !important; text-align:center">Documento - PROJETO INFRAESTRUTURA DE REDES</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -48,3 +153,5 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+

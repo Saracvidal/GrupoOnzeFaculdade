@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GrupoOnzeFaculdade")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09614348444f8c4d0fa5fd4de9d7a44920c08c71")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4cc8bf400761b35ce823cf4e1cd00e028fccf166")]
 [assembly: System.Reflection.AssemblyProductAttribute("GrupoOnzeFaculdade")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GrupoOnzeFaculdade")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -23,6 +23,11 @@ namespace GrupoOnzeFaculdade.Controllers
             return View();
         }
 
+        public IActionResult PoliticaSeguranca()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
